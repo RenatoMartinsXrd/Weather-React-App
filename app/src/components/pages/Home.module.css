@@ -1,0 +1,10 @@
+.containerInputSearch {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.containerInputSearch h1{
+  color: white;
+  padding-bottom: 10px;
+  font-size: calc(1.4em + 1vw);
+}
