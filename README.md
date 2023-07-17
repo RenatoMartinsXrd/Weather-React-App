@@ -4,6 +4,10 @@ App para consultar temperatura de qualquer cidade brasileira a partir de um inpu
 
 # 🎲 Rodando o Front-end
 
+# Acesse o site
+
+https://renatomartinsxrd.github.io/Weather-React-App/
+
 ### Clone este repositório
 
 <p>git clone https://github.com/RenatoMartinsXrd/Weather-React-App<p/>
