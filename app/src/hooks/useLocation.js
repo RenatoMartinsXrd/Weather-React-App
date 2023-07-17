@@ -4,11 +4,13 @@ import { getLocationFromIp } from "../services/IpService";
 const useLocation = () => {
   const [position, setPosition] = React.useState('');
   const [city, setCity] = React.useState('');
+  const [state, setState] = React.useState('');
 
   const getCityFromCoords = async(data) => {
     const {latitude, longitude} = data
     const responseReverseGeocode = await getReverseGeocode(latitude, longitude)
     setCity(responseReverseGeocode[0].name)
+    setState(responseReverseGeocode[0].state)
 
     return responseReverseGeocode
   };
@@ -26,7 +28,7 @@ const useLocation = () => {
       try {
         const responseCurrentPosition = await getCurrentPosition()
         setPosition(responseCurrentPosition);
-        getCityFromCoords(responseCurrentPosition.coords)
+        getCityFromCoords(responseCurrentPosition?.coords)
 
       }catch(error){
         const responseLocationFromIp = await getLocationFromIp()
@@ -38,7 +40,7 @@ const useLocation = () => {
 
   }, [])
 
-  return { position, city}
+  return { position, city, state}
 
 }
 

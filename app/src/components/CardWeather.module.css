@@ -1,0 +1,39 @@
+.card {
+  background-color: #F6F5FA;
+  border-radius: 10px;
+  padding: 20px;
+  width: 40%;
+}
+
+.containerContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.textDay{
+  font-size: calc(0.8em + 1vw);
+}
+
+.textCity{
+  font-size: calc(0.5em + 1vw);
+}
+
+.textTemperature{
+  font-size: calc(1em + 1vw);
+  color: #FF914D;
+}
+
+.pinto{
+  font-size: calc(0.3em + 1vw);
+  font-weight: 500;
+  color: rgb(45, 45, 45);
+}
+
+@media (max-width: 580px) {
+  .card {
+    width: 100%;
+  }
+}
